@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Hello World
+        </title>
+    </head>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+        }
+        .shell{
+            /* background-color: #4b4b4a; */
+            height: 100vh;
+            /* align-items: center;
+            justify-content: space-evenly;
+            display: flex; */
+            transition: .3s;
+        }
+        .crils{
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            border-radius: 360px;
+            /* background-color: white; */
+            width: 80px;
+            height: 36px;
+            transition: .3s;
+        }
+        .btn{
+            border-radius: 360px;
+            /* background-color: #4b4b4a; */
+            width: 30px;
+            height: 30px;
+            position: relative;
+            top: 3px;
+            left: 9px;
+            transition: .3s;
+        }
+    </style>
+    <body class="shell">
+        <div class="crils">
+            <a href="#"><div class="btn"></div></a>
+        </div>
+    </body>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <Script>
+        $(document).ready(function(){
+            var a = 1;
+            $(".crils").css("background","white");
+            $(".shell").css("background","#4b4b4a");
+            $(".btn").css("background","#4b4b4a");
+            $(".btn").click(function(){
+                if(a == 1){
+                    $(".btn").animate({
+                        left:'41px'
+                    });
+                    $(".shell").css("background-color","white");
+                    $(".crils").css("background-color","#4b4b4a");
+                    $(".btn").css("background-color","white");
+                    a += 1;
+                }
+                else{
+                    $(".btn").animate({
+                        left:'10px'
+                    });
+                    $(".shell").css("background-color","#4b4b4a");
+                    $(".crils").css("background-color","white");
+                    $(".btn").css("background-color","#4b4b4a");
+                    a = 1;
+                }
+            })
+        })
+    </Script>
+</html>
