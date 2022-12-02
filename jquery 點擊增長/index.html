@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head>
+
+    </head>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+        }
+        body{
+            background-color: #4b4b4a;
+            width: 100vh;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .ggb{
+            width: 50px;
+            height: 50px;
+            background: white;
+            transition: .5s;
+        }
+        span{
+            color: black;
+        }
+    </style>
+    <body>
+        <a href="#">
+            <div class="ggb">
+                <span>
+                    0
+                </span>
+            </div>
+        </a>
+    </body>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script><script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var a = 50;
+            var b = 1;
+            $(".ggb").click(function(){
+                $("span").text(b);
+                b += 1;
+                a += 10;
+                $(".ggb").css({
+                   width: a, 
+                });
+            });
+        });
+    </script>
+</html>
