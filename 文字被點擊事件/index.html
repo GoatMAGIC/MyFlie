@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <link rel="icon" type="image/icon" href="assets/user.ico">
+        <title>
+            文字被點擊事件
+        </title>
+        <style>
+            .po{
+                cursor: pointer;
+            }
+            .po .potext{
+                visibility: hidden;
+            }
+            .po .show{
+                visibility: visible;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="po" onclick="show()">點我
+            <span class="potext" id="po_text">
+                嗨
+            </span>
+        </div>
+    </body>
+    <script src="jquery-1.10.2.min.js"></script>
+    <script>
+        function show(){
+            var po = document.getElementById("po_text");
+            po.classList.toggle("show");
+        }
+    </script>
+</html>
